@@ -6,23 +6,14 @@ export default {
     ],
     theme: {
         extend: {
-            colors: {
-                'gov-primary': '#0072BB',
-                'gov-success': '#2E7D33',
-                'gov-text': '#333333',
-                'gov-text-secondary': '#666666',
-                'gov-border': '#CCCCCC',
-                'gov-bg': '#F8F9FA',
-                'gov-callout': '#EAF7FA',
+            keyframes: {
+                slideIn: {
+                    '0%': { opacity: '0', transform: 'translateY(-50px)' },
+                    '100%': { opacity: '1', transform: 'translateY(0)' },
+                },
             },
-            fontFamily: {
-                'sans': ['Roboto', 'system-ui', 'sans-serif'],
-            },
-            minHeight: {
-                'touch': '48px',
-            },
-            minWidth: {
-                'touch': '48px',
+            animation: {
+                slideIn: 'slideIn 0.3s ease-out',
             },
         },
     },
