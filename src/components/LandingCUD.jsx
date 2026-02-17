@@ -31,11 +31,16 @@ export default function LandingCUD() {
         <div className="min-h-screen bg-gray-50">
             {/* HEADER */}
             <header className="w-full bg-[#2B3E50]">
-                <div className="container mx-auto">
+                <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
                     <img
-                        src="/banner-ministerio.png"
-                        alt="Ministerio de Salud República Argentina - Secretaría Nacional de Discapacidad"
-                        className="w-full h-auto max-h-[120px] md:max-h-[100px] object-cover"
+                        src="/logo-ministerio.png"
+                        alt="Ministerio de Salud - República Argentina"
+                        className="h-20 md:h-24 w-auto object-contain"
+                    />
+                    <img
+                        src="/logo-secretaria.png"
+                        alt="Secretaría Nacional de Discapacidad"
+                        className="h-16 md:h-20 w-auto object-contain"
                     />
                 </div>
             </header>
@@ -138,7 +143,7 @@ export default function LandingCUD() {
                             </p>
 
                             <button
-                                onClick={() => window.location.href = JOTFORM_URL}
+                                onClick={() => window.open(JOTFORM_URL, '_blank', 'noopener,noreferrer')}
                                 className="px-12 py-4 bg-[#28A745] hover:bg-[#218838] text-white text-lg font-semibold rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-green-300"
                             >
                                 Continuar
