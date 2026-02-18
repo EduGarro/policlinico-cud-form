@@ -97,7 +97,7 @@ export default function HeroSection() {
                             className="mb-8 max-w-md text-lg text-gray-600 leading-relaxed"
                             variants={itemVariants}
                         >
-                            Solicite su CUD con un turno online del CERPRE
+                            Solicite su CUD con un turno online en el CERPRE
                             de manera rápida, accesible y gratuita.
                         </motion.p>
 
