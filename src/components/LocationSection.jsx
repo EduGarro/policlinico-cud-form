@@ -28,14 +28,14 @@ export default function LocationSection() {
                         className="lg:col-span-2 rounded-xl overflow-hidden shadow-lg border border-gray-200"
                     >
                         <iframe
-                            title="Ubicación CERPRE - Centro de Referencia Provincial de Rehabilitación"
-                            src="https://maps.google.com/maps?q=-33.2970813,-66.3233705+(CERPRE)&hl=es&z=17&output=embed"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3334.799589598514!2d-66.32184812442965!3d-33.297905673450366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d43f007fd04ffb%3A0x332d843bb1e2988d!2sCERPRE!5e0!3m2!1ses-419!2sar!4v1771374353055!5m2!1ses-419!2sar"
                             width="100%"
                             height="450"
                             style={{ border: 0 }}
                             allowFullScreen
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
+                            title="Ubicación CERPRE"
                         />
                     </motion.div>
 
