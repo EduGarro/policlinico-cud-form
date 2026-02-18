@@ -28,8 +28,8 @@ export default function LocationSection() {
                         className="lg:col-span-2 rounded-xl overflow-hidden shadow-lg border border-gray-200"
                     >
                         <iframe
-                            title="Ubicación CERPRE - Complejo Sanitario San Luis"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.5!2d-66.3196!3d-33.2958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d439407ad5c4a1%3A0x2a77b2a79bfc35b4!2sComplejo%20Sanitario%20San%20Luis!5e0!3m2!1ses!2sar!4v1708200000000!5m2!1ses!2sar"
+                            title="Ubicación CERPRE - Centro de Referencia Provincial de Rehabilitación"
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3334.8311045000246!2d-66.3233705!3d-33.2970813!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d43f007fd04ffb%3A0x332d843bb1e2988d!2sCERPRE!5e0!3m2!1ses-419!2sar!4v1771373745430!5m2!1ses-419!2sar"
                             width="100%"
                             height="400"
                             style={{ border: 0 }}
