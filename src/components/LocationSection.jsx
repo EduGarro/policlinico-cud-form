@@ -29,9 +29,9 @@ export default function LocationSection() {
                     >
                         <iframe
                             title="Ubicación CERPRE - Centro de Referencia Provincial de Rehabilitación"
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3334.8311045000246!2d-66.3233705!3d-33.2970813!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d43f007fd04ffb%3A0x332d843bb1e2988d!2sCERPRE!5e0!3m2!1ses-419!2sar!4v1771373745430!5m2!1ses-419!2sar"
+                            src="https://maps.google.com/maps?q=-33.2970813,-66.3233705&hl=es&z=17&output=embed"
                             width="100%"
-                            height="400"
+                            height="450"
                             style={{ border: 0 }}
                             allowFullScreen
                             loading="lazy"
