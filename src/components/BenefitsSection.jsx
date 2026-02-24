@@ -284,7 +284,9 @@ export default function BenefitsSection() {
                                                 ? 'url(/salud-modal-image.png)'
                                                 : selectedBenefit.title === 'Transporte'
                                                     ? 'url(/transporte-modal-image.png)'
-                                                    : 'url(/benefit-modal-image.png)',
+                                                    : selectedBenefit.title === 'Asignaciones'
+                                                        ? 'url(/asignaciones-modal-image.png)'
+                                                        : 'url(/benefit-modal-image.png)',
                                     }}
                                     initial={{ clipPath: 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)' }}
                                     animate={{ clipPath: 'polygon(0% 0, 100% 0, 100% 100%, 0% 100%)' }}
