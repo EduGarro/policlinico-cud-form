@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Stethoscope, Bus, Wallet, FileText, X, ChevronDown } from 'lucide-react';
+import { Tilt } from './Tilt';
 
 const JOTFORM_URL = 'https://form.jotform.com/260465222587056';
 
@@ -275,23 +276,22 @@ export default function BenefitsSection() {
 
                             {/* Right Side: Image with Animation */}
                             <div className="hidden md:flex w-[45%] bg-[#F3F6F9] relative overflow-hidden items-center justify-center p-8">
-                                <motion.div
-                                    className="w-full h-full bg-center bg-no-repeat bg-contain z-10"
-                                    style={{
-                                        backgroundImage: selectedBenefit.title === 'Otros Tramites'
-                                            ? 'url(/tramites-modal-image.png)'
-                                            : selectedBenefit.title === 'Salud'
-                                                ? 'url(/salud-modal-image.png)'
-                                                : selectedBenefit.title === 'Transporte'
-                                                    ? 'url(/transporte-modal-image.png)'
-                                                    : selectedBenefit.title === 'Asignaciones'
-                                                        ? 'url(/asignaciones-modal-image.png)'
-                                                        : 'url(/benefit-modal-image.png)',
-                                    }}
-                                    initial={{ clipPath: 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)' }}
-                                    animate={{ clipPath: 'polygon(0% 0, 100% 0, 100% 100%, 0% 100%)' }}
-                                    transition={{ duration: 1.2, ease: 'circOut', delay: 0.1 }}
-                                />
+                                <Tilt className="w-full h-full z-10" rotationFactor={10}>
+                                    <div
+                                        className="w-full h-full bg-center bg-no-repeat bg-contain"
+                                        style={{
+                                            backgroundImage: selectedBenefit.title === 'Otros Tramites'
+                                                ? 'url(/tramites-modal-image.png)'
+                                                : selectedBenefit.title === 'Salud'
+                                                    ? 'url(/salud-modal-image.png)'
+                                                    : selectedBenefit.title === 'Transporte'
+                                                        ? 'url(/transporte-modal-image.png)'
+                                                        : selectedBenefit.title === 'Asignaciones'
+                                                            ? 'url(/asignaciones-modal-image.png)'
+                                                            : 'url(/benefit-modal-image.png)',
+                                        }}
+                                    />
+                                </Tilt>
                                 {/* Abstract background elements to make the PNG pop */}
                                 <div className="absolute top-[-10%] right-[-10%] w-96 h-96 bg-poncho-alert rounded-full opacity-50 blur-3xl mix-blend-multiply" />
                                 <div className="absolute bottom-[-10%] left-[-10%] w-96 h-96 bg-poncho-cyan rounded-full opacity-10 blur-3xl mix-blend-multiply" />
