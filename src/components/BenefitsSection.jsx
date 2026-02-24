@@ -31,9 +31,10 @@ const benefitsData = [
             <div className="space-y-4 text-gray-700 text-lg">
                 <p className="font-semibold text-gray-900">Translado gratuito en el transporte público, exención de pago de peajes y libre translados.</p>
                 <ul className="list-disc pl-5 space-y-3 text-base">
-                    <li>En San Luis tramite la CIPE como paso urbano e interurbano en Centro de admisión más cercano</li>
+                    <li>En San Luis tramite la CIPE como paso urbano e interurbano en EX CASA DE GOBIERNO y/o TERMINAL NUEVA (Ediro)</li>
                     <li>Para viajes de larga distancia. Tramitar con varios días de anticipación en terminal o por página web: <a href="https://reservapasajes.cnrt.gov.ar/login" target="_blank" rel="noopener noreferrer" className="text-[#0072BB] underline font-semibold">reservapasajes.cnrt.gov.ar/login</a>.</li>
                     <li>Si tiene CUD con acompañante puede optar por viajar solo o acompañado.</li>
+                    <li><strong>Oblea Nacional:</strong> DESCARGAR MI ARGENTINA - OBTENER SIMBOLO INTERNACIONAL DE ACCESO (no es necesario ser titular de un vehículo). +Info: <a href="https://argentina.gov.ar/obtener-simbolo-internacional-de-acceso-digital" target="_blank" rel="noopener noreferrer" className="text-[#0072BB] underline font-semibold break-all">argentina.gov.ar/obtener-simbolo-internacional-de-acceso-digital</a>.</li>
                     <li><strong>Oblea Provincial:</strong> si usted ya cuenta con un permiso nacional, puede acercarse a la dirección de tránsito (Avenida La Finur, esquina Tomás Jofre) y completar el formulario de autorización. Debe llevar el CUD</li>
                     <li><strong>Peajes:</strong> solicitar requisitos en cualquier peaje</li>
                 </ul>
