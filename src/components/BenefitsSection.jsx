@@ -1,8 +1,55 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Stethoscope, Bus, Wallet, FileText, X } from 'lucide-react';
+import { Stethoscope, Bus, Wallet, FileText, X, ChevronDown } from 'lucide-react';
 
 const JOTFORM_URL = 'https://form.jotform.com/260465222587056';
+
+function TransportAccordionItem({ title, content }) {
+    const [isOpen, setIsOpen] = useState(false);
+
+    return (
+        <div className="border border-gray-200 rounded-lg overflow-hidden bg-white">
+            <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="w-full px-4 py-3 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
+                aria-expanded={isOpen}
+            >
+                <span className="font-semibold text-gray-900 pr-4">{title}</span>
+                <motion.div
+                    animate={{ rotate: isOpen ? 180 : 0 }}
+                    transition={{ duration: 0.2 }}
+                    className="flex-shrink-0 text-gray-400"
+                >
+                    <ChevronDown className="h-5 w-5" />
+                </motion.div>
+            </button>
+
+            <AnimatePresence initial={false}>
+                {isOpen && (
+                    <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{
+                            height: 'auto',
+                            opacity: 1,
+                            transition: { duration: 0.2, ease: 'easeOut' },
+                        }}
+                        exit={{
+                            height: 0,
+                            opacity: 0,
+                            transition: { duration: 0.2, ease: 'easeIn' },
+                        }}
+                    >
+                        <div className="px-4 pb-3 pt-1 border-t border-gray-100">
+                            <p className="text-sm text-gray-700 leading-relaxed">
+                                {content}
+                            </p>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </div>
+    );
+}
 
 const benefitsData = [
     {
@@ -28,16 +75,34 @@ const benefitsData = [
         title: 'Transporte',
         shortDescription: 'Pases libres en transporte público y Símbolo de Acceso.',
         details: (
-            <div className="space-y-4 text-gray-700 text-lg">
-                <p className="font-semibold text-gray-900">Translado gratuito en el transporte público, exención de pago de peajes y libre translados.</p>
-                <ul className="list-disc pl-5 space-y-3 text-base">
-                    <li><strong>CIPE:</strong> Tramitar en San Luis como paso urbano e interurbano en: Centro de Emision mas cercano, EX CASA DE GOBIERNO y/o TERMINAL NUEVA (Ediro)</li>
-                    <li><strong>CUD DIGITAL:</strong> se podrá visualizar a través de la app MI ARGENTINA, en la sección MIS DOCUMENTOS y, en el caso de niños menores de 13 años, en la sección HIJOS ASOCIADOS. Para mayor información dirigirse a PUNTO DIGITAL SAN LUIS - Ubicado en Polideportivo Municipal "Manuel García Ferre" - Av. Serrana, La Punta, San Luis. Correo: lapuntasl@puntodigital.gov.ar. Contacto (Whatsapp) 2664-589671</li>
-                    <li><strong>Para viajes de larga distancia</strong>. Tramitar con varios días de anticipación en terminal o por página web: <a href="https://reservapasajes.cnrt.gov.ar/login" target="_blank" rel="noopener noreferrer" className="text-[#0072BB] underline font-semibold break-all">reservapasajes.cnrt.gov.ar/login</a><br />Si tiene CUD con acompañante puede optar por viajar solo o acompañado.</li>
-                    <li><strong>Oblea Nacional:</strong> DESCARGAR MI ARGENTINA - OBTENER SIMBOLO INTERNACIONAL DE ACCESO (no es necesario ser titular de un vehículo). +Info: <a href="https://argentina.gov.ar/obtener-simbolo-internacional-de-acceso-digital" target="_blank" rel="noopener noreferrer" className="text-[#0072BB] underline font-semibold break-all">argentina.gov.ar/obtener-simbolo-internacional-de-acceso-digital</a>.</li>
-                    <li><strong>Oblea Provincial:</strong> si usted ya cuenta con un permiso nacional, puede acercarse a la dirección de tránsito (Avenida La Finur, esquina Tomás Jofre) y completar el formulario de autorización. Debe llevar el CUD</li>
-                    <li><strong>Peajes:</strong> solicitar requisitos en cualquier peaje</li>
-                </ul>
+            <div>
+                <p className="font-semibold text-gray-900 mb-4">Translado gratuito en el transporte público, exención de pago de peajes y libre translados.</p>
+                <div className="space-y-2">
+                    <TransportAccordionItem
+                        title="CIPE (Paso urbano e interurbano)"
+                        content="Tramitar en San Luis como paso urbano e interurbano en: Centro de Emision mas cercano, EX CASA DE GOBIERNO y/o TERMINAL NUEVA (Ediro)"
+                    />
+                    <TransportAccordionItem
+                        title="CUD DIGITAL (Mi Argentina)"
+                        content="Se podrá visualizar a través de la app MI ARGENTINA, en la sección MIS DOCUMENTOS y, en el caso de niños menores de 13 años, en la sección HIJOS ASOCIADOS. Para mayor información dirigirse a PUNTO DIGITAL SAN LUIS - Ubicado en Polideportivo Municipal 'Manuel García Ferre' - Av. Serrana, La Punta, San Luis. Correo: lapuntasl@puntodigital.gov.ar. Contacto (Whatsapp) 2664-589671"
+                    />
+                    <TransportAccordionItem
+                        title="Viajes de larga distancia"
+                        content={<>Tramitar con varios días de anticipación en terminal o por página web: <a href="https://reservapasajes.cnrt.gov.ar/login" target="_blank" rel="noopener noreferrer" className="text-[#0072BB] underline font-semibold break-all">reservapasajes.cnrt.gov.ar/login</a><br />Si tiene CUD con acompañante puede optar por viajar solo o acompañado.</>}
+                    />
+                    <TransportAccordionItem
+                        title="Oblea Nacional"
+                        content={<>DESCARGAR MI ARGENTINA - OBTENER SIMBOLO INTERNACIONAL DE ACCESO (no es necesario ser titular de un vehículo). +Info: <a href="https://argentina.gov.ar/obtener-simbolo-internacional-de-acceso-digital" target="_blank" rel="noopener noreferrer" className="text-[#0072BB] underline font-semibold break-all">argentina.gov.ar/obtener-simbolo-internacional-de-acceso-digital</a>.</>}
+                    />
+                    <TransportAccordionItem
+                        title="Oblea Provincial"
+                        content="Si usted ya cuenta con un permiso nacional, puede acercarse a la dirección de tránsito (Avenida La Finur, esquina Tomás Jofre) y completar el formulario de autorización. Debe llevar el CUD"
+                    />
+                    <TransportAccordionItem
+                        title="Peajes"
+                        content="Solicitar requisitos en cualquier peaje"
+                    />
+                </div>
             </div>
         )
     },
