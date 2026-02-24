@@ -280,7 +280,9 @@ export default function BenefitsSection() {
                                     style={{
                                         backgroundImage: selectedBenefit.title === 'Otros Tramites'
                                             ? 'url(/tramites-modal-image.png)'
-                                            : 'url(/benefit-modal-image.png)',
+                                            : selectedBenefit.title === 'Salud'
+                                                ? 'url(/salud-modal-image.png)'
+                                                : 'url(/benefit-modal-image.png)',
                                     }}
                                     initial={{ clipPath: 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)' }}
                                     animate={{ clipPath: 'polygon(0% 0, 100% 0, 100% 100%, 0% 100%)' }}
