@@ -56,9 +56,9 @@ export default function LocationSection() {
                                 <div>
                                     <h3 className="text-sm font-bold text-gray-900 mb-1">Dirección</h3>
                                     <p className="text-sm text-gray-600 leading-relaxed">
-                                        Complejo Sanitario San Luis
+                                        Hospital Pediatrico de San Luis
                                         <br />
-                                        Héroes de Malvinas 110
+                                        Pasaje Pasteur y Ciudad del Rosario
                                         <br />
                                         San Luis, Argentina
                                     </p>
