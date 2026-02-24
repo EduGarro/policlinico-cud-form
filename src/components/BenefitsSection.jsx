@@ -278,7 +278,9 @@ export default function BenefitsSection() {
                                 <motion.div
                                     className="w-full h-full bg-center bg-no-repeat bg-contain z-10"
                                     style={{
-                                        backgroundImage: 'url(/benefit-modal-image.png)',
+                                        backgroundImage: selectedBenefit.title === 'Otros Tramites'
+                                            ? 'url(/tramites-modal-image.png)'
+                                            : 'url(/benefit-modal-image.png)',
                                     }}
                                     initial={{ clipPath: 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)' }}
                                     animate={{ clipPath: 'polygon(0% 0, 100% 0, 100% 100%, 0% 100%)' }}
