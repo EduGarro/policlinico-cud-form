@@ -84,7 +84,7 @@ const benefitsData = [
                     />
                     <TransportAccordionItem
                         title="CUD DIGITAL (Mi Argentina)"
-                        content="Se podrá visualizar a través de la app MI ARGENTINA, en la sección MIS DOCUMENTOS y, en el caso de niños menores de 13 años, en la sección HIJOS ASOCIADOS. Para mayor información dirigirse a PUNTO DIGITAL SAN LUIS - Ubicado en Polideportivo Municipal 'Manuel García Ferre' - Av. Serrana, La Punta, San Luis. Correo: lapuntasl@puntodigital.gov.ar. Contacto (Whatsapp) 2664-589671"
+                        content={<>Se podrá visualizar a través de la app MI ARGENTINA, en la sección MIS DOCUMENTOS y, en el caso de niños menores de 13 años, en la sección HIJOS ASOCIADOS.<br /><br />Para mayor información dirigirse a PUNTO DIGITAL SAN LUIS - Ubicado en Polideportivo Municipal 'Manuel García Ferre' - Av. Serrana, La Punta, San Luis. Correo: lapuntasl@puntodigital.gov.ar. Contacto (Whatsapp) 2664-589671</>}
                     />
                     <TransportAccordionItem
                         title="Viajes de larga distancia"
