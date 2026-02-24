@@ -14,7 +14,7 @@ function TransportAccordionItem({ title, content }) {
                 className="w-full px-4 py-3 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
                 aria-expanded={isOpen}
             >
-                <span className="font-semibold text-gray-900 pr-4">{title}</span>
+                <span className="text-gray-900 pr-4">{title}</span>
                 <motion.div
                     animate={{ rotate: isOpen ? 180 : 0 }}
                     transition={{ duration: 0.2 }}
